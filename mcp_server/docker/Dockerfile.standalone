@@ -54,6 +54,14 @@ COPY main.py ./
 COPY src/ ./src/
 COPY config/ ./config/
 
+# Copy patched graphiti_core files
+COPY patch/graphiti_core/llm_client/openai_client.py /app/mcp/.venv/lib/python3.11/site-packages/graphiti_core/llm_client/
+COPY patch/graphiti_core/llm_client/ollama_client.py /app/mcp/.venv/lib/python3.11/site-packages/graphiti_core/llm_client/
+
+# Copy patched mcp_server files
+COPY patch/mcp_server/src/services/factories.py /app/mcp/src/services/
+COPY patch/mcp_server/src/graphiti_mcp_server.py /app/mcp/src/
+
 # Create log directory
 RUN mkdir -p /var/log/graphiti
 
