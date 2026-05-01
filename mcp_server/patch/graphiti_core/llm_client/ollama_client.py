@@ -10,14 +10,14 @@ from graphiti_core.prompts import Message
 logger = logging.getLogger(name)
 
 class OllamaGraphitiClient(OpenAIGenericClient):
-"""
-Optimized LLM client for Ollama with Graphiti
-
-Features:
-- Simplifies Pydantic schemas for Ollama
-- Parses JSON responses robustly
-- Compatible with all Ollama models (DeepSeek, Qwen, Llama, etc.)
-"""
+    """
+    Optimized LLM client for Ollama with Graphiti
+    
+    Features:
+    - Simplifies Pydantic schemas for Ollama
+    - Parses JSON responses robustly
+    - Compatible with all Ollama models (DeepSeek, Qwen, Llama, etc.)
+    """
 
 def __init__(self, config: LLMConfig):
     super().__init__(config)
