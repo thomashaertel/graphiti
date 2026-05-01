@@ -247,4 +247,4 @@ def _extract_json_from_response(self, text: str) -> dict:
         return json.loads(json_str)
 
     # Cas 4: Tout le texte est JSON
-    return json.loads(text)`
+    return json.loads(text)
