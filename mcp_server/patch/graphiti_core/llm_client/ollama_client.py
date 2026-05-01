@@ -7,7 +7,7 @@ from graphiti_core.llm_client.openai_generic_client import OpenAIGenericClient
 from graphiti_core.llm_client.config import LLMConfig
 from graphiti_core.prompts import Message
 
-logger = logging.getLogger(name)
+logger = logging.getLogger(__name__)
 
 class OllamaGraphitiClient(OpenAIGenericClient):
     """
