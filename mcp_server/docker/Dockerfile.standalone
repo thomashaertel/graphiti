@@ -55,6 +55,7 @@ COPY src/ ./src/
 COPY config/ ./config/
 
 # Copy patched graphiti_core files
+COPY patch/graphiti_core/prompts/extract-edges.py /app/mcp/.venv/lib/python3.11/site-packages/graphiti_core/prompts/
 COPY patch/graphiti_core/llm_client/openai_generic_client.py /app/mcp/.venv/lib/python3.11/site-packages/graphiti_core/llm_client/
 COPY patch/graphiti_core/llm_client/ollama_client.py /app/mcp/.venv/lib/python3.11/site-packages/graphiti_core/llm_client/
 
